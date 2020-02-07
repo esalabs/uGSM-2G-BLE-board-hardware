@@ -1,0 +1,3 @@
+https://componentsearchengine.com/MDBT50Q-1MV2/Raytac <- ble module
+SIM800C - already available in default KiCAD
+https://github.com/tclarke/kicad-mikroBUS <- mikrobus will be modif for specific pins (silk)
