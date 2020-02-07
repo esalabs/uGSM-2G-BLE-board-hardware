@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name mikroBUS)(type KiCad)(uri /home/silardg/Documents/SENSA/voja/uGSM-2G-BLE-board-hardware/Lib/Footprint/mikroBUS.pretty)(options "")(descr ""))
+  (lib (name MDBT50Q-1MV2)(type Legacy)(uri /home/silardg/Documents/SENSA/voja/uGSM-2G-BLE-board-hardware/Lib/Footprint/MDBT50Q-1MV2.mod)(options "")(descr ""))
+)

@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name MDBT50Q-1MV2)(type Legacy)(uri /home/silardg/Documents/SENSA/voja/uGSM-2G-BLE-board-hardware/Lib/Symbol/MDBT50Q-1MV2.lib)(options "")(descr ""))
+  (lib (name mikroBUS)(type Legacy)(uri /home/silardg/Documents/SENSA/voja/uGSM-2G-BLE-board-hardware/Lib/Symbol/mikroBUS.lib)(options "")(descr ""))
+)
