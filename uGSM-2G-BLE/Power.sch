@@ -13,4 +13,310 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L Regulator_Switching:TPS562200 U?
+U 1 1 5E4CF52E
+P 2550 1600
+F 0 "U?" H 2550 1967 50  0000 C CNN
+F 1 "TPS562201DDCR " H 2550 1876 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 2600 1350 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tps562201.pdf" H 2550 1600 50  0001 C CNN
+	1    2550 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5E4CFDD4
+P 1000 1450
+F 0 "#PWR?" H 1000 1300 50  0001 C CNN
+F 1 "VCC" H 1017 1623 50  0000 C CNN
+F 2 "" H 1000 1450 50  0001 C CNN
+F 3 "" H 1000 1450 50  0001 C CNN
+	1    1000 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5E4D017E
+P 1000 1700
+F 0 "C?" H 1050 1800 50  0000 L CNN
+F 1 "100nF" H 1050 1600 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1038 1550 50  0001 C CNN
+F 3 "~" H 1000 1700 50  0001 C CNN
+	1    1000 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5E4D043A
+P 1350 1700
+F 0 "C?" H 1400 1800 50  0000 L CNN
+F 1 "10uF" H 1400 1600 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 1388 1550 50  0001 C CNN
+F 3 "~" H 1350 1700 50  0001 C CNN
+	1    1350 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5E4D12F1
+P 1650 1700
+F 0 "C?" H 1700 1800 50  0000 L CNN
+F 1 "10uF" H 1700 1600 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 1688 1550 50  0001 C CNN
+F 3 "~" H 1650 1700 50  0001 C CNN
+	1    1650 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 1500 1950 1500
+Wire Wire Line
+	1000 1500 1000 1550
+Wire Wire Line
+	1350 1550 1350 1500
+Connection ~ 1350 1500
+Wire Wire Line
+	1350 1500 1000 1500
+Wire Wire Line
+	1650 1550 1650 1500
+Connection ~ 1650 1500
+Wire Wire Line
+	1650 1500 1350 1500
+Wire Wire Line
+	1000 1450 1000 1500
+Connection ~ 1000 1500
+Wire Wire Line
+	1000 1850 1000 1950
+Wire Wire Line
+	1350 1850 1350 1950
+Wire Wire Line
+	1650 1850 1650 1950
+Wire Wire Line
+	2550 1900 2550 1950
+$Comp
+L power:GND #PWR?
+U 1 1 5E4D3523
+P 1000 1950
+F 0 "#PWR?" H 1000 1700 50  0001 C CNN
+F 1 "GND" H 1005 1777 50  0000 C CNN
+F 2 "" H 1000 1950 50  0001 C CNN
+F 3 "" H 1000 1950 50  0001 C CNN
+	1    1000 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E4D37DF
+P 1350 1950
+F 0 "#PWR?" H 1350 1700 50  0001 C CNN
+F 1 "GND" H 1355 1777 50  0000 C CNN
+F 2 "" H 1350 1950 50  0001 C CNN
+F 3 "" H 1350 1950 50  0001 C CNN
+	1    1350 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E4D38D7
+P 1650 1950
+F 0 "#PWR?" H 1650 1700 50  0001 C CNN
+F 1 "GND" H 1655 1777 50  0000 C CNN
+F 2 "" H 1650 1950 50  0001 C CNN
+F 3 "" H 1650 1950 50  0001 C CNN
+	1    1650 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E4D3BFF
+P 2550 1950
+F 0 "#PWR?" H 2550 1700 50  0001 C CNN
+F 1 "GND" H 2555 1777 50  0000 C CNN
+F 2 "" H 2550 1950 50  0001 C CNN
+F 3 "" H 2550 1950 50  0001 C CNN
+	1    2550 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E4D45E1
+P 2100 1900
+F 0 "R?" H 2030 1854 50  0000 R CNN
+F 1 "10K" H 2030 1945 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2030 1900 50  0001 C CNN
+F 3 "~" H 2100 1900 50  0001 C CNN
+	1    2100 1900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2100 2050 2100 2100
+Wire Wire Line
+	2100 2100 1950 2100
+Wire Wire Line
+	1950 2100 1950 1500
+Connection ~ 1950 1500
+Wire Wire Line
+	1950 1500 1650 1500
+Wire Wire Line
+	2150 1700 2100 1700
+Wire Wire Line
+	2100 1700 2100 1750
+$Comp
+L Device:C C?
+U 1 1 5E4D576D
+P 3300 1600
+F 0 "C?" V 3400 1700 50  0000 L CNN
+F 1 "100nF" V 3350 1300 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3338 1450 50  0001 C CNN
+F 3 "~" H 3300 1600 50  0001 C CNN
+	1    3300 1600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2950 1600 3150 1600
+Wire Wire Line
+	2950 1500 3550 1500
+Wire Wire Line
+	3550 1500 3550 1600
+Wire Wire Line
+	3550 1600 3450 1600
+$Comp
+L Device:L L?
+U 1 1 5E4D6B67
+P 3750 1500
+F 0 "L?" V 3940 1500 50  0000 C CNN
+F 1 "3.3uH" V 3849 1500 50  0000 C CNN
+F 2 "" H 3750 1500 50  0001 C CNN
+F 3 "~" H 3750 1500 50  0001 C CNN
+	1    3750 1500
+	0    -1   -1   0   
+$EndComp
+Text Notes 3450 1100 0    50   ~ 0
+assign footprint: L\n
+$Comp
+L Device:C C?
+U 1 1 5E4D71B4
+P 4100 1700
+F 0 "C?" H 4150 1800 50  0000 L CNN
+F 1 "22uF" H 4150 1600 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 4138 1550 50  0001 C CNN
+F 3 "~" H 4100 1700 50  0001 C CNN
+	1    4100 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5E4D76D7
+P 4400 1700
+F 0 "C?" H 4450 1800 50  0000 L CNN
+F 1 "22uF" H 4450 1600 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 4438 1550 50  0001 C CNN
+F 3 "~" H 4400 1700 50  0001 C CNN
+	1    4400 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E4D7B15
+P 4100 1950
+F 0 "#PWR?" H 4100 1700 50  0001 C CNN
+F 1 "GND" H 4105 1777 50  0000 C CNN
+F 2 "" H 4100 1950 50  0001 C CNN
+F 3 "" H 4100 1950 50  0001 C CNN
+	1    4100 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E4D81BB
+P 4400 1950
+F 0 "#PWR?" H 4400 1700 50  0001 C CNN
+F 1 "GND" H 4405 1777 50  0000 C CNN
+F 2 "" H 4400 1950 50  0001 C CNN
+F 3 "" H 4400 1950 50  0001 C CNN
+	1    4400 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 1500 4100 1500
+Wire Wire Line
+	4400 1500 4400 1550
+Wire Wire Line
+	4100 1550 4100 1500
+Connection ~ 4100 1500
+Wire Wire Line
+	4100 1500 4400 1500
+Wire Wire Line
+	4100 1850 4100 1950
+Wire Wire Line
+	4400 1850 4400 1950
+Wire Wire Line
+	3600 1500 3550 1500
+Connection ~ 3550 1500
+Text Notes 4500 1400 0    50   ~ 0
+R1: 42.1k R2: 10k\nVout = 0.768 * (1+ R1/R2)\nVout = 4.00128V
+$Comp
+L Device:R R?
+U 1 1 5E4DC2AA
+P 4800 1700
+F 0 "R?" H 4730 1654 50  0000 R CNN
+F 1 "42.1K" H 4730 1745 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4730 1700 50  0001 C CNN
+F 3 "~" H 4800 1700 50  0001 C CNN
+	1    4800 1700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E4DCB16
+P 4800 2100
+F 0 "R?" H 4730 2054 50  0000 R CNN
+F 1 "10K" H 4730 2145 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4730 2100 50  0001 C CNN
+F 3 "~" H 4800 2100 50  0001 C CNN
+	1    4800 2100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E4DEB6D
+P 4800 2300
+F 0 "#PWR?" H 4800 2050 50  0001 C CNN
+F 1 "GND" H 4805 2127 50  0000 C CNN
+F 2 "" H 4800 2300 50  0001 C CNN
+F 3 "" H 4800 2300 50  0001 C CNN
+	1    4800 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 1700 3000 1700
+Wire Wire Line
+	3000 1700 3000 2250
+Wire Wire Line
+	3000 2250 4600 2250
+Wire Wire Line
+	4600 2250 4600 1900
+Wire Wire Line
+	4600 1900 4800 1900
+Wire Wire Line
+	4800 1900 4800 1850
+Wire Wire Line
+	4800 1900 4800 1950
+Connection ~ 4800 1900
+Wire Wire Line
+	4800 2250 4800 2300
+Wire Wire Line
+	4400 1500 4800 1500
+Wire Wire Line
+	4800 1500 4800 1550
+Connection ~ 4400 1500
+Text HLabel 4850 1500 2    50   Input ~ 0
+SIM_VCC
+Wire Wire Line
+	4800 1500 4850 1500
+Connection ~ 4800 1500
+Text Notes 850  2350 0    50   ~ 0
+http://www.ti.com/lit/ug/slvual5/slvual5.pdf
+Text Notes 800  900  0    79   Italic 16
+!! check http://www.ti.com/lit/ds/symlink/tps562201.pdf Layout Guidlines !!
 $EndSCHEMATC
