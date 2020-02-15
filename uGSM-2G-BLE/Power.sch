@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 6
+Sheet 2 6
 Title ""
 Date ""
 Rev ""
@@ -436,28 +436,6 @@ F 3 "~" H 8650 3200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
-U 1 1 5E5196D5
-P 8450 3750
-F 0 "#PWR?" H 8450 3500 50  0001 C CNN
-F 1 "GND" H 8455 3577 50  0000 C CNN
-F 2 "" H 8450 3750 50  0001 C CNN
-F 3 "" H 8450 3750 50  0001 C CNN
-	1    8450 3750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8400 3650 8400 3700
-Wire Wire Line
-	8400 3700 8450 3700
-Wire Wire Line
-	8500 3700 8500 3650
-Wire Wire Line
-	8450 3700 8450 3750
-Connection ~ 8450 3700
-Wire Wire Line
-	8450 3700 8500 3700
-$Comp
 L Power_Protection:PRTR5V0U2X D?
 U 1 1 5E51C285
 P 10150 2300
@@ -618,12 +596,9 @@ Wire Wire Line
 	8850 1750 8850 1050
 Wire Wire Line
 	8850 1050 9100 1050
-Wire Wire Line
-	9400 1050 9400 1000
 Connection ~ 8850 1750
 Wire Wire Line
 	9400 1050 9400 1100
-Connection ~ 9400 1050
 Wire Wire Line
 	9100 1050 9100 1100
 Connection ~ 9100 1050
@@ -633,7 +608,7 @@ Wire Wire Line
 	9100 1400 9100 1450
 Wire Wire Line
 	9400 1400 9400 1450
-Text HLabel 9400 1000 1    50   Input ~ 0
+Text HLabel 9800 1000 1    50   Input ~ 0
 USB_5V
 Text Notes 9650 3500 0    50   ~ 0
 Follow classic USB guidelines
@@ -700,4 +675,44 @@ Wire Wire Line
 Connection ~ 6100 3850
 Wire Wire Line
 	5650 3550 5700 3550
+$Comp
+L Device:L FB?
+U 1 1 5E54216F
+P 9600 1050
+F 0 "FB?" V 9790 1050 50  0000 C CNN
+F 1 "120R/0.55A" V 9700 1200 50  0000 C CNN
+F 2 "" H 9600 1050 50  0001 C CNN
+F 3 "~" H 9600 1050 50  0001 C CNN
+	1    9600 1050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9450 1050 9400 1050
+Connection ~ 9400 1050
+Wire Wire Line
+	9750 1050 9800 1050
+Wire Wire Line
+	9800 1050 9800 1000
+Wire Wire Line
+	8450 3700 8500 3700
+Wire Wire Line
+	8500 3700 8500 3650
+Wire Wire Line
+	8400 3650 8400 3700
+$Comp
+L power:GND #PWR?
+U 1 1 5E5196D5
+P 8450 3750
+F 0 "#PWR?" H 8450 3500 50  0001 C CNN
+F 1 "GND" H 8455 3577 50  0000 C CNN
+F 2 "" H 8450 3750 50  0001 C CNN
+F 3 "" H 8450 3750 50  0001 C CNN
+	1    8450 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 3700 8450 3750
+Connection ~ 8450 3700
+Wire Wire Line
+	8400 3700 8450 3700
 $EndSCHEMATC
