@@ -21,6 +21,7 @@ F 0 "U?" H 2550 1967 50  0000 C CNN
 F 1 "TPS562201DDCR " H 2550 1876 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-6" H 2600 1350 50  0001 L CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tps562201.pdf" H 2550 1600 50  0001 C CNN
+F 4 "TPS562201DDCR " H 2550 1600 50  0001 C CNN "Manufacturerpart"
 	1    2550 1600
 	1    0    0    -1  
 $EndComp
@@ -319,4 +320,384 @@ Text Notes 850  2350 0    50   ~ 0
 http://www.ti.com/lit/ug/slvual5/slvual5.pdf
 Text Notes 800  900  0    79   Italic 16
 !! check http://www.ti.com/lit/ds/symlink/tps562201.pdf Layout Guidlines !!
+Text Notes 5200 2400 1    50   ~ 0
+R1 and R2 +/- 1%\n
+$Comp
+L Regulator_Linear:MIC5205-3.3YM5 U?
+U 1 1 5E4F322E
+P 2150 3850
+F 0 "U?" H 2150 4192 50  0000 C CNN
+F 1 "MIC5225-3.3YM5-TR " H 2150 4101 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 2150 4175 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/mic5225.pdf" H 2150 3850 50  0001 C CNN
+	1    2150 3850
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2450 3850
+$Comp
+L power:GND #PWR?
+U 1 1 5E4F8117
+P 2150 4200
+F 0 "#PWR?" H 2150 3950 50  0001 C CNN
+F 1 "GND" H 2155 4027 50  0000 C CNN
+F 2 "" H 2150 4200 50  0001 C CNN
+F 3 "" H 2150 4200 50  0001 C CNN
+	1    2150 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 4150 2150 4200
+Wire Wire Line
+	1850 3850 1800 3850
+Wire Wire Line
+	1800 3850 1800 3750
+Wire Wire Line
+	1800 3750 1850 3750
+$Comp
+L Device:C C?
+U 1 1 5E4FBB1C
+P 1500 3950
+F 0 "C?" H 1550 4050 50  0000 L CNN
+F 1 "1uF" H 1550 3850 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1538 3800 50  0001 C CNN
+F 3 "~" H 1500 3950 50  0001 C CNN
+	1    1500 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5E4FCA72
+P 2600 3950
+F 0 "C?" H 2650 4050 50  0000 L CNN
+F 1 "2.2uF" H 2650 3850 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2638 3800 50  0001 C CNN
+F 3 "~" H 2600 3950 50  0001 C CNN
+	1    2600 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E4FCF93
+P 2600 4200
+F 0 "#PWR?" H 2600 3950 50  0001 C CNN
+F 1 "GND" H 2605 4027 50  0000 C CNN
+F 2 "" H 2600 4200 50  0001 C CNN
+F 3 "" H 2600 4200 50  0001 C CNN
+	1    2600 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E4FD22F
+P 1500 4200
+F 0 "#PWR?" H 1500 3950 50  0001 C CNN
+F 1 "GND" H 1505 4027 50  0000 C CNN
+F 2 "" H 1500 4200 50  0001 C CNN
+F 3 "" H 1500 4200 50  0001 C CNN
+	1    1500 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 3750 2600 3750
+Wire Wire Line
+	2600 3750 2600 3800
+Wire Wire Line
+	2600 4100 2600 4200
+Wire Wire Line
+	1500 4100 1500 4200
+Wire Wire Line
+	1500 3800 1500 3750
+Wire Wire Line
+	1500 3750 1800 3750
+Connection ~ 1800 3750
+Wire Wire Line
+	1500 3750 1500 3700
+Connection ~ 1500 3750
+Text HLabel 1500 3700 1    50   Input ~ 0
+SIM_VCC
+Text Notes 850  3300 0    50   ~ 0
+May change! Check issue on github
+Text HLabel 2650 3750 2    50   Input ~ 0
+3V3
+Wire Wire Line
+	2600 3750 2650 3750
+Connection ~ 2600 3750
+Text Notes 1350 4450 1    50   ~ 0
+Atleast 16V rated cap
+$Comp
+L Connector:USB_B_Micro J?
+U 1 1 5E51790A
+P 8500 3250
+F 0 "J?" H 8557 3717 50  0000 C CNN
+F 1 "USB_B_Micro" H 8557 3626 50  0000 C CNN
+F 2 "" H 8650 3200 50  0001 C CNN
+F 3 "~" H 8650 3200 50  0001 C CNN
+	1    8500 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E5196D5
+P 8450 3750
+F 0 "#PWR?" H 8450 3500 50  0001 C CNN
+F 1 "GND" H 8455 3577 50  0000 C CNN
+F 2 "" H 8450 3750 50  0001 C CNN
+F 3 "" H 8450 3750 50  0001 C CNN
+	1    8450 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8400 3650 8400 3700
+Wire Wire Line
+	8400 3700 8450 3700
+Wire Wire Line
+	8500 3700 8500 3650
+Wire Wire Line
+	8450 3700 8450 3750
+Connection ~ 8450 3700
+Wire Wire Line
+	8450 3700 8500 3700
+$Comp
+L Power_Protection:PRTR5V0U2X D?
+U 1 1 5E51C285
+P 10150 2300
+F 0 "D?" H 10500 2550 50  0000 L CNN
+F 1 "PRTR5V0U2X" H 10300 2650 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-143" H 10210 2300 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/PRTR5V0U2X.pdf" H 10210 2300 50  0001 C CNN
+	1    10150 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E51DB91
+P 10150 2850
+F 0 "#PWR?" H 10150 2600 50  0001 C CNN
+F 1 "GND" H 10155 2677 50  0000 C CNN
+F 2 "" H 10150 2850 50  0001 C CNN
+F 3 "" H 10150 2850 50  0001 C CNN
+	1    10150 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10150 2800 10150 2850
+$Comp
+L Device:C C?
+U 1 1 5E5200FD
+P 9100 1950
+F 0 "C?" H 9150 2050 50  0000 L CNN
+F 1 "10uF" H 9150 1850 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9138 1800 50  0001 C CNN
+F 3 "~" H 9100 1950 50  0001 C CNN
+	1    9100 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5E5226B9
+P 9400 1950
+F 0 "C?" H 9450 2050 50  0000 L CNN
+F 1 "100nF" H 9450 1850 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9438 1800 50  0001 C CNN
+F 3 "~" H 9400 1950 50  0001 C CNN
+	1    9400 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E5318F2
+P 9400 2150
+F 0 "#PWR?" H 9400 1900 50  0001 C CNN
+F 1 "GND" H 9405 1977 50  0000 C CNN
+F 2 "" H 9400 2150 50  0001 C CNN
+F 3 "" H 9400 2150 50  0001 C CNN
+	1    9400 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E531D8F
+P 9100 2150
+F 0 "#PWR?" H 9100 1900 50  0001 C CNN
+F 1 "GND" H 9105 1977 50  0000 C CNN
+F 2 "" H 9100 2150 50  0001 C CNN
+F 3 "" H 9100 2150 50  0001 C CNN
+	1    9100 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 3050 8850 3050
+Wire Wire Line
+	8850 1750 9100 1750
+Wire Wire Line
+	9100 1750 9100 1800
+Wire Wire Line
+	9100 1750 9400 1750
+Wire Wire Line
+	9400 1750 9400 1800
+Connection ~ 9100 1750
+Wire Wire Line
+	10150 1750 10150 1800
+Connection ~ 9400 1750
+Wire Wire Line
+	8800 3250 10700 3250
+Wire Wire Line
+	8800 3350 9600 3350
+Wire Wire Line
+	10650 2300 10700 2300
+Wire Wire Line
+	10700 2300 10700 3250
+Connection ~ 10700 3250
+Wire Wire Line
+	10700 3250 10750 3250
+Wire Wire Line
+	9650 2300 9600 2300
+Wire Wire Line
+	9600 2300 9600 3350
+Connection ~ 9600 3350
+Wire Wire Line
+	9600 3350 10750 3350
+Wire Wire Line
+	9400 2100 9400 2150
+Wire Wire Line
+	9100 2100 9100 2150
+Wire Wire Line
+	9400 1750 10150 1750
+Wire Wire Line
+	8850 1750 8850 3050
+NoConn ~ 8800 3450
+Text HLabel 10750 3350 2    50   Input ~ 0
+USB_D-
+Text HLabel 10750 3250 2    50   Input ~ 0
+USB_D+
+$Comp
+L Device:C C?
+U 1 1 5E480FA3
+P 9100 1250
+F 0 "C?" H 9150 1350 50  0000 L CNN
+F 1 "100nF" H 9150 1150 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9138 1100 50  0001 C CNN
+F 3 "~" H 9100 1250 50  0001 C CNN
+	1    9100 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E48158D
+P 9100 1450
+F 0 "#PWR?" H 9100 1200 50  0001 C CNN
+F 1 "GND" H 9105 1277 50  0000 C CNN
+F 2 "" H 9100 1450 50  0001 C CNN
+F 3 "" H 9100 1450 50  0001 C CNN
+	1    9100 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5E481E36
+P 9400 1250
+F 0 "C?" H 9450 1350 50  0000 L CNN
+F 1 "100nF" H 9450 1150 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9438 1100 50  0001 C CNN
+F 3 "~" H 9400 1250 50  0001 C CNN
+	1    9400 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E481E40
+P 9400 1450
+F 0 "#PWR?" H 9400 1200 50  0001 C CNN
+F 1 "GND" H 9405 1277 50  0000 C CNN
+F 2 "" H 9400 1450 50  0001 C CNN
+F 3 "" H 9400 1450 50  0001 C CNN
+	1    9400 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 1750 8850 1050
+Wire Wire Line
+	8850 1050 9100 1050
+Wire Wire Line
+	9400 1050 9400 1000
+Connection ~ 8850 1750
+Wire Wire Line
+	9400 1050 9400 1100
+Connection ~ 9400 1050
+Wire Wire Line
+	9100 1050 9100 1100
+Connection ~ 9100 1050
+Wire Wire Line
+	9100 1050 9400 1050
+Wire Wire Line
+	9100 1400 9100 1450
+Wire Wire Line
+	9400 1400 9400 1450
+Text HLabel 9400 1000 1    50   Input ~ 0
+USB_5V
+Text Notes 9650 3500 0    50   ~ 0
+Follow classic USB guidelines
+$Comp
+L power:VCC #PWR?
+U 1 1 5E49693D
+P 6300 3800
+F 0 "#PWR?" H 6300 3650 50  0001 C CNN
+F 1 "VCC" H 6317 3973 50  0000 C CNN
+F 2 "" H 6300 3800 50  0001 C CNN
+F 3 "" H 6300 3800 50  0001 C CNN
+	1    6300 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 5E4977E5
+P 5050 3950
+F 0 "J?" H 4968 3625 50  0000 C CNN
+F 1 "VCC_INPUT" H 4968 3716 50  0000 C CNN
+F 2 "" H 5050 3950 50  0001 C CNN
+F 3 "~" H 5050 3950 50  0001 C CNN
+	1    5050 3950
+	-1   0    0    1   
+$EndComp
+Text HLabel 5650 3550 0    50   Input ~ 0
+USB_5V
+$Comp
+L Device:D D?
+U 1 1 5E49A8D1
+P 5850 3550
+F 0 "D?" H 5850 3334 50  0000 C CNN
+F 1 "D" H 5850 3425 50  0000 C CNN
+F 2 "" H 5850 3550 50  0001 C CNN
+F 3 "~" H 5850 3550 50  0001 C CNN
+	1    5850 3550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5250 3950 5300 3950
+Wire Wire Line
+	5300 3950 5300 4000
+$Comp
+L power:GND #PWR?
+U 1 1 5E4A242C
+P 5300 4000
+F 0 "#PWR?" H 5300 3750 50  0001 C CNN
+F 1 "GND" H 5305 3827 50  0000 C CNN
+F 2 "" H 5300 4000 50  0001 C CNN
+F 3 "" H 5300 4000 50  0001 C CNN
+	1    5300 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 3850 6100 3850
+Wire Wire Line
+	6100 3850 6100 3550
+Wire Wire Line
+	6100 3550 6000 3550
+Wire Wire Line
+	6100 3850 6300 3850
+Wire Wire Line
+	6300 3850 6300 3800
+Connection ~ 6100 3850
+Wire Wire Line
+	5650 3550 5700 3550
 $EndSCHEMATC
