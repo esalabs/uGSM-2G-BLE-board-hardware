@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 6
+Sheet 4 6
 Title ""
 Date ""
 Rev ""
@@ -42,17 +42,6 @@ NoConn ~ 4700 5650
 NoConn ~ 6300 5550
 NoConn ~ 6300 5650
 $Comp
-L Connector:Conn_Coaxial J?
-U 1 1 5E444014
-P 6900 3650
-F 0 "J?" H 7000 3625 50  0000 L CNN
-F 1 "SIM_SMA" H 7000 3534 50  0000 L CNN
-F 2 "Connector_Coaxial:SMA_Amphenol_132203-12_Horizontal" H 6900 3650 50  0001 C CNN
-F 3 " ~" H 6900 3650 50  0001 C CNN
-	1    6900 3650
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector:SIM_Card J?
 U 1 1 5E444FAE
 P 10450 1500
@@ -68,22 +57,16 @@ NoConn ~ 6300 3950
 $Comp
 L power:GND #PWR?
 U 1 1 5E447B3A
-P 6900 3900
-F 0 "#PWR?" H 6900 3650 50  0001 C CNN
-F 1 "GND" H 6905 3727 50  0000 C CNN
-F 2 "" H 6900 3900 50  0001 C CNN
-F 3 "" H 6900 3900 50  0001 C CNN
-	1    6900 3900
+P 7400 3900
+F 0 "#PWR?" H 7400 3650 50  0001 C CNN
+F 1 "GND" H 7405 3727 50  0000 C CNN
+F 2 "" H 7400 3900 50  0001 C CNN
+F 3 "" H 7400 3900 50  0001 C CNN
+	1    7400 3900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	6300 3850 6350 3850
-Wire Wire Line
-	6350 3850 6350 3650
-Wire Wire Line
-	6350 3650 6700 3650
-Wire Wire Line
-	6900 3850 6900 3900
 Text GLabel 6350 4250 2    50   Input ~ 0
 SIM_VDD
 Text GLabel 6350 4350 2    50   Input ~ 0
@@ -188,7 +171,7 @@ Wire Wire Line
 	9000 1200 9400 1200
 Wire Wire Line
 	9000 2200 9000 2300
-Text GLabel 8200 1200 0    50   Input ~ 0
+Text GLabel 7700 1200 0    50   Input ~ 0
 SIM_VDD
 $Comp
 L Device:R R?
@@ -242,8 +225,6 @@ Wire Wire Line
 	8900 1400 9600 1400
 Wire Wire Line
 	8900 1700 9700 1700
-Wire Wire Line
-	9000 1200 8200 1200
 Connection ~ 9000 1200
 $Comp
 L power:GND #PWR?
@@ -262,101 +243,17 @@ Wire Wire Line
 	8450 1900 8450 1700
 Wire Wire Line
 	8450 1700 8600 1700
-Text GLabel 8200 1700 0    50   Input ~ 0
+Text GLabel 7700 1700 0    50   Input ~ 0
 SIM_DATA
-Text GLabel 8200 1400 0    50   Input ~ 0
+Text GLabel 7700 1400 0    50   Input ~ 0
 SIM_CLK
-Text GLabel 8200 1300 0    50   Input ~ 0
+Text GLabel 7700 1300 0    50   Input ~ 0
 SIM_RST
-Wire Wire Line
-	8450 1700 8200 1700
 Connection ~ 8450 1700
-Wire Wire Line
-	8600 1400 8200 1400
-Wire Wire Line
-	8200 1300 8600 1300
 NoConn ~ 6350 4650
 Text Notes 6400 4700 0    50   ~ 0
 using 6-pin sim card\n
 NoConn ~ 4700 5150
-$Comp
-L Device:R R?
-U 1 1 5E480D7B
-P 10400 3550
-F 0 "R?" V 10500 3550 50  0000 C CNN
-F 1 "470" V 10300 3550 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 10330 3550 50  0001 C CNN
-F 3 "~" H 10400 3550 50  0001 C CNN
-	1    10400 3550
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:LED D?
-U 1 1 5E481D7D
-P 10400 3900
-F 0 "D?" V 10439 3783 50  0000 R CNN
-F 1 "LED" V 10348 3783 50  0000 R CNN
-F 2 "LED_SMD:LED_0603_1608Metric" H 10400 3900 50  0001 C CNN
-F 3 "~" H 10400 3900 50  0001 C CNN
-	1    10400 3900
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5E4824FD
-P 10400 4100
-F 0 "#PWR?" H 10400 3850 50  0001 C CNN
-F 1 "GND" H 10405 3927 50  0000 C CNN
-F 2 "" H 10400 4100 50  0001 C CNN
-F 3 "" H 10400 4100 50  0001 C CNN
-	1    10400 4100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10400 3400 10400 3350
-Wire Wire Line
-	10400 3700 10400 3750
-Wire Wire Line
-	10400 4050 10400 4100
-$Comp
-L Device:R R?
-U 1 1 5E4842BC
-P 10800 3550
-F 0 "R?" V 10900 3550 50  0000 C CNN
-F 1 "470" V 10700 3550 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 10730 3550 50  0001 C CNN
-F 3 "~" H 10800 3550 50  0001 C CNN
-	1    10800 3550
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:LED D?
-U 1 1 5E4842C6
-P 10800 3900
-F 0 "D?" V 10839 3783 50  0000 R CNN
-F 1 "LED" V 10748 3783 50  0000 R CNN
-F 2 "LED_SMD:LED_0603_1608Metric" H 10800 3900 50  0001 C CNN
-F 3 "~" H 10800 3900 50  0001 C CNN
-	1    10800 3900
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5E4842D0
-P 10800 4100
-F 0 "#PWR?" H 10800 3850 50  0001 C CNN
-F 1 "GND" H 10805 3927 50  0000 C CNN
-F 2 "" H 10800 4100 50  0001 C CNN
-F 3 "" H 10800 4100 50  0001 C CNN
-	1    10800 4100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10800 3400 10800 3350
-Wire Wire Line
-	10800 3700 10800 3750
-Wire Wire Line
-	10800 4050 10800 4100
 Text GLabel 6350 5250 2    50   Input ~ 0
 SIM_STATUS
 Text GLabel 6350 5350 2    50   Input ~ 0
@@ -365,12 +262,6 @@ Wire Wire Line
 	6300 5250 6350 5250
 Wire Wire Line
 	6300 5350 6350 5350
-Text GLabel 10400 3350 1    50   Input ~ 0
-SIM_STATUS
-Text GLabel 10800 3350 1    50   Input ~ 0
-SIM_NETLIGHT
-Text Notes 6550 4950 0    50   ~ 0
-do we need this?
 NoConn ~ 4700 4150
 NoConn ~ 4700 4050
 NoConn ~ 4700 3850
@@ -381,16 +272,12 @@ Text HLabel 4650 4350 0    50   Input ~ 0
 UART_TX
 Text HLabel 4650 4450 0    50   Input ~ 0
 UART_RX
-Text Notes 3200 4450 0    50   ~ 0
-add diode isolation here?
 Wire Wire Line
 	4650 4350 4700 4350
 Wire Wire Line
 	4650 4450 4700 4450
-Text HLabel 4650 4950 0    50   Input ~ 0
+Text HLabel 4100 5200 0    50   Input ~ 0
 PWRKEY
-Wire Wire Line
-	4700 4950 4650 4950
 Text GLabel 5700 3600 1    50   Input ~ 0
 SIM_VBAT
 Wire Wire Line
@@ -552,4 +439,439 @@ Wire Wire Line
 	5100 3050 5100 3100
 Wire Wire Line
 	5100 3400 5100 3450
+$Comp
+L Device:Q_NPN_BEC Q?
+U 1 1 5E6B9B71
+P 4350 5200
+F 0 "Q?" H 4300 5450 50  0000 L CNN
+F 1 "MMUN2233LT1G" H 3800 5350 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4550 5300 50  0001 C CNN
+F 3 "https://www.onsemi.com/pub/Collateral/DTC143Z-D.PDF" H 4350 5200 50  0001 C CNN
+	1    4350 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 5200 4150 5200
+Wire Wire Line
+	4450 5400 4450 5450
+$Comp
+L power:GND #PWR?
+U 1 1 5E6C315F
+P 4450 5450
+F 0 "#PWR?" H 4450 5200 50  0001 C CNN
+F 1 "GND" H 4455 5277 50  0000 C CNN
+F 2 "" H 4450 5450 50  0001 C CNN
+F 3 "" H 4450 5450 50  0001 C CNN
+	1    4450 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 5000 4450 4950
+Wire Wire Line
+	4450 4950 4700 4950
+$Comp
+L Device:C C?
+U 1 1 5E6D15C7
+P 7100 5350
+F 0 "C?" H 7150 5450 50  0000 L CNN
+F 1 "1uF" H 7150 5250 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7138 5200 50  0001 C CNN
+F 3 "~" H 7100 5350 50  0001 C CNN
+	1    7100 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E6D2D8F
+P 7100 5550
+F 0 "#PWR?" H 7100 5300 50  0001 C CNN
+F 1 "GND" H 7105 5377 50  0000 C CNN
+F 2 "" H 7100 5550 50  0001 C CNN
+F 3 "" H 7100 5550 50  0001 C CNN
+	1    7100 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 4850 7100 4850
+Wire Wire Line
+	7100 5200 7100 4850
+Wire Wire Line
+	7100 5500 7100 5550
+$Comp
+L Device:R R?
+U 1 1 5E6DCE63
+P 6700 4950
+F 0 "R?" V 6700 4950 50  0000 C CNN
+F 1 "22" V 6650 5100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 4950 50  0001 C CNN
+F 3 "~" H 6700 4950 50  0001 C CNN
+	1    6700 4950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E6DE239
+P 6700 5050
+F 0 "R?" V 6700 5050 50  0000 C CNN
+F 1 "22" V 6650 5200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 5050 50  0001 C CNN
+F 3 "~" H 6700 5050 50  0001 C CNN
+	1    6700 5050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6300 4950 6550 4950
+Wire Wire Line
+	6300 5050 6550 5050
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5E6CAF7A
+P 8750 5100
+F 0 "TP?" V 8750 5300 50  0000 L CNN
+F 1 "SIM_USB_DM" V 8750 5500 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 8950 5100 50  0001 C CNN
+F 3 "~" H 8950 5100 50  0001 C CNN
+	1    8750 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5E6CACB2
+P 8750 4950
+F 0 "TP?" V 8750 5150 50  0000 L CNN
+F 1 "SIM_USB_DP" V 8750 5350 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 8950 4950 50  0001 C CNN
+F 3 "~" H 8950 4950 50  0001 C CNN
+	1    8750 4950
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5E6C7717
+P 8750 4650
+F 0 "TP?" V 8750 4850 50  0000 L CNN
+F 1 "SIM_USB_VBUS" V 8750 5050 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 8950 4650 50  0001 C CNN
+F 3 "~" H 8950 4650 50  0001 C CNN
+	1    8750 4650
+	0    1    1    0   
+$EndComp
+$Comp
+L ugsm_lib:USBLC6 U?
+U 1 1 5E770D9A
+P 8050 5050
+F 0 "U?" H 8450 5350 50  0000 C CNN
+F 1 "USBLC6" H 7750 5350 50  0000 C CNN
+F 2 "" H 7800 5250 50  0001 C CNN
+F 3 "" H 7800 5250 50  0001 C CNN
+	1    8050 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 4650 8050 4650
+Wire Wire Line
+	7350 4650 7350 4850
+Wire Wire Line
+	7350 4850 7100 4850
+Connection ~ 7100 4850
+Wire Wire Line
+	8050 4700 8050 4650
+Connection ~ 8050 4650
+Wire Wire Line
+	8050 4650 7350 4650
+Wire Wire Line
+	6850 4950 7500 4950
+Wire Wire Line
+	6850 5050 7450 5050
+Wire Wire Line
+	7450 5050 7450 5100
+Wire Wire Line
+	7450 5100 7500 5100
+Wire Wire Line
+	8600 4950 8750 4950
+Wire Wire Line
+	8600 5100 8750 5100
+$Comp
+L power:GND #PWR?
+U 1 1 5E78E735
+P 8050 5550
+F 0 "#PWR?" H 8050 5300 50  0001 C CNN
+F 1 "GND" H 8055 5377 50  0000 C CNN
+F 2 "" H 8050 5550 50  0001 C CNN
+F 3 "" H 8050 5550 50  0001 C CNN
+	1    8050 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 5350 8050 5550
+$Comp
+L Device:C C?
+U 1 1 5E797299
+P 8200 2050
+F 0 "C?" H 8250 2150 50  0000 L CNN
+F 1 "22pF" H 8250 1950 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8238 1900 50  0001 C CNN
+F 3 "~" H 8200 2050 50  0001 C CNN
+	1    8200 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5E79761E
+P 7950 2050
+F 0 "C?" H 8000 2150 50  0000 L CNN
+F 1 "22pF" H 8000 1950 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7988 1900 50  0001 C CNN
+F 3 "~" H 7950 2050 50  0001 C CNN
+	1    7950 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E79BBE2
+P 8200 2300
+F 0 "#PWR?" H 8200 2050 50  0001 C CNN
+F 1 "GND" H 8205 2127 50  0000 C CNN
+F 2 "" H 8200 2300 50  0001 C CNN
+F 3 "" H 8200 2300 50  0001 C CNN
+	1    8200 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E79BE74
+P 7950 2300
+F 0 "#PWR?" H 7950 2050 50  0001 C CNN
+F 1 "GND" H 7955 2127 50  0000 C CNN
+F 2 "" H 7950 2300 50  0001 C CNN
+F 3 "" H 7950 2300 50  0001 C CNN
+	1    7950 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 1700 8450 1700
+Wire Wire Line
+	7700 1400 8200 1400
+Wire Wire Line
+	7700 1200 9000 1200
+Wire Wire Line
+	7700 1300 7950 1300
+Wire Wire Line
+	8200 1900 8200 1400
+Connection ~ 8200 1400
+Wire Wire Line
+	8200 1400 8600 1400
+Wire Wire Line
+	7950 1900 7950 1300
+Connection ~ 7950 1300
+Wire Wire Line
+	7950 1300 8600 1300
+Wire Wire Line
+	7950 2200 7950 2300
+Wire Wire Line
+	8200 2200 8200 2300
+Text GLabel 1250 7150 0    50   Input ~ 0
+SIM_STATUS
+Text GLabel 2400 7150 0    50   Input ~ 0
+SIM_NETLIGHT
+$Comp
+L Device:LED D?
+U 1 1 5E481D7D
+P 1600 6400
+F 0 "D?" V 1639 6283 50  0000 R CNN
+F 1 "LED" V 1548 6283 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 1600 6400 50  0001 C CNN
+F 3 "~" H 1600 6400 50  0001 C CNN
+	1    1600 6400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E480D7B
+P 1600 6750
+F 0 "R?" V 1700 6750 50  0000 C CNN
+F 1 "470" V 1500 6750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1530 6750 50  0001 C CNN
+F 3 "~" H 1600 6750 50  0001 C CNN
+	1    1600 6750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:Q_NPN_BEC Q?
+U 1 1 5E7C3523
+P 1500 7150
+F 0 "Q?" H 1450 7400 50  0000 L CNN
+F 1 "MMUN2233LT1G" H 950 7300 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1700 7250 50  0001 C CNN
+F 3 "https://www.onsemi.com/pub/Collateral/DTC143Z-D.PDF" H 1500 7150 50  0001 C CNN
+	1    1500 7150
+	1    0    0    -1  
+$EndComp
+Text GLabel 1600 6200 1    50   Input ~ 0
+SIM_VBAT
+$Comp
+L power:GND #PWR?
+U 1 1 5E7CDE0E
+P 1600 7400
+F 0 "#PWR?" H 1600 7150 50  0001 C CNN
+F 1 "GND" H 1605 7227 50  0000 C CNN
+F 2 "" H 1600 7400 50  0001 C CNN
+F 3 "" H 1600 7400 50  0001 C CNN
+	1    1600 7400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 7150 1300 7150
+Wire Wire Line
+	1600 7350 1600 7400
+Wire Wire Line
+	1600 6900 1600 6950
+Wire Wire Line
+	1600 6550 1600 6600
+Wire Wire Line
+	1600 6200 1600 6250
+$Comp
+L Device:LED D?
+U 1 1 5E7F2A4B
+P 2750 6400
+F 0 "D?" V 2789 6283 50  0000 R CNN
+F 1 "LED" V 2698 6283 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 2750 6400 50  0001 C CNN
+F 3 "~" H 2750 6400 50  0001 C CNN
+	1    2750 6400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E7F2A55
+P 2750 6750
+F 0 "R?" V 2850 6750 50  0000 C CNN
+F 1 "470" V 2650 6750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2680 6750 50  0001 C CNN
+F 3 "~" H 2750 6750 50  0001 C CNN
+	1    2750 6750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:Q_NPN_BEC Q?
+U 1 1 5E7F2A5F
+P 2650 7150
+F 0 "Q?" H 2600 7400 50  0000 L CNN
+F 1 "MMUN2233LT1G" H 2100 7300 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2850 7250 50  0001 C CNN
+F 3 "https://www.onsemi.com/pub/Collateral/DTC143Z-D.PDF" H 2650 7150 50  0001 C CNN
+	1    2650 7150
+	1    0    0    -1  
+$EndComp
+Text GLabel 2750 6200 1    50   Input ~ 0
+SIM_VBAT
+$Comp
+L power:GND #PWR?
+U 1 1 5E7F2A6A
+P 2750 7400
+F 0 "#PWR?" H 2750 7150 50  0001 C CNN
+F 1 "GND" H 2755 7227 50  0000 C CNN
+F 2 "" H 2750 7400 50  0001 C CNN
+F 3 "" H 2750 7400 50  0001 C CNN
+	1    2750 7400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 7150 2450 7150
+Wire Wire Line
+	2750 7350 2750 7400
+Wire Wire Line
+	2750 6900 2750 6950
+Wire Wire Line
+	2750 6550 2750 6600
+Wire Wire Line
+	2750 6200 2750 6250
+$Comp
+L Connector:Conn_Coaxial J?
+U 1 1 5E444014
+P 7400 3500
+F 0 "J?" H 7500 3475 50  0000 L CNN
+F 1 "SIM_SMA" H 7500 3384 50  0000 L CNN
+F 2 "Connector_Coaxial:SMA_Amphenol_132203-12_Horizontal" H 7400 3500 50  0001 C CNN
+F 3 " ~" H 7400 3500 50  0001 C CNN
+	1    7400 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E80691A
+P 6750 3900
+F 0 "#PWR?" H 6750 3650 50  0001 C CNN
+F 1 "GND" H 6755 3727 50  0000 C CNN
+F 2 "" H 6750 3900 50  0001 C CNN
+F 3 "" H 6750 3900 50  0001 C CNN
+	1    6750 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5E80944C
+P 6750 3700
+F 0 "C?" H 6800 3800 50  0000 L CNN
+F 1 "DP" H 6800 3600 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6788 3550 50  0001 C CNN
+F 3 "~" H 6750 3700 50  0001 C CNN
+	1    6750 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E80A9AE
+P 6950 3500
+F 0 "R?" V 6850 3450 50  0000 C CNN
+F 1 "0" V 6850 3550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6880 3500 50  0001 C CNN
+F 3 "~" H 6950 3500 50  0001 C CNN
+	1    6950 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5E80BC17
+P 7150 3700
+F 0 "C?" H 7200 3800 50  0000 L CNN
+F 1 "DP" H 7200 3600 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7188 3550 50  0001 C CNN
+F 3 "~" H 7150 3700 50  0001 C CNN
+	1    7150 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E80C02A
+P 7150 3900
+F 0 "#PWR?" H 7150 3650 50  0001 C CNN
+F 1 "GND" H 7155 3727 50  0000 C CNN
+F 2 "" H 7150 3900 50  0001 C CNN
+F 3 "" H 7150 3900 50  0001 C CNN
+	1    7150 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 3500 6750 3500
+Wire Wire Line
+	6350 3500 6350 3850
+Wire Wire Line
+	6750 3550 6750 3500
+Connection ~ 6750 3500
+Wire Wire Line
+	6750 3500 6800 3500
+Wire Wire Line
+	7100 3500 7150 3500
+Wire Wire Line
+	7150 3550 7150 3500
+Connection ~ 7150 3500
+Wire Wire Line
+	7150 3500 7200 3500
+Wire Wire Line
+	6750 3850 6750 3900
+Wire Wire Line
+	7150 3850 7150 3900
+Wire Wire Line
+	7400 3700 7400 3900
 $EndSCHEMATC

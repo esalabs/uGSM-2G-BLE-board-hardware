@@ -334,9 +334,9 @@ F 3 "~" H 7450 1700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 7600 1950
-Text HLabel 9000 1350 1    50   Input ~ 0
+Text HLabel 10800 1700 2    50   Input ~ 0
 USB_D-
-Text HLabel 10100 1400 1    50   Input ~ 0
+Text HLabel 10800 1850 2    50   Input ~ 0
 USB_D+
 Text HLabel 8600 1500 1    50   Input ~ 0
 USB_5V
@@ -357,17 +357,6 @@ Wire Wire Line
 	2700 4100 2700 4050
 Text HLabel 2700 4050 1    50   Input ~ 0
 3V3
-$Comp
-L Transistor_FET:DMG2301L Q?
-U 1 1 5E80CE9A
-P 1300 3600
-F 0 "Q?" H 1504 3646 50  0000 L CNN
-F 1 "DMG2305" H 1504 3555 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 1500 3525 50  0001 L CIN
-F 3 "https://www.diodes.com/assets/Datasheets/DMG2305UX.pdf" H 1300 3600 50  0001 L CNN
-	1    1300 3600
-	1    0    0    -1  
-$EndComp
 $Comp
 L Diode:MBR340 D?
 U 1 1 5E80DF50
@@ -440,7 +429,7 @@ L Device:R R?
 U 1 1 5E826ED9
 P 1000 4300
 F 0 "R?" H 950 4350 50  0000 R CNN
-F 1 "100K" H 950 4450 50  0000 R CNN
+F 1 "10K" H 950 4450 50  0000 R CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 930 4300 50  0001 C CNN
 F 3 "~" H 1000 4300 50  0001 C CNN
 	1    1000 4300
@@ -573,18 +562,6 @@ Wire Wire Line
 Text GLabel 1400 3250 1    50   Input ~ 0
 RAW_PWR_IN
 $Comp
-L Power_Protection:USBLC6-2SC6 U?
-U 1 1 5E8934D8
-P 9550 1950
-F 0 "U?" H 9300 2300 50  0000 C CNN
-F 1 "USBLC6-2SC6" H 9950 1600 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6" H 8800 2350 50  0001 C CNN
-F 3 "http://www2.st.com/resource/en/datasheet/CD00050750.pdf" H 9750 2300 50  0001 C CNN
-F 4 "https://export.farnell.com/stmicroelectronics/usblc6-2sc6/esd-protection-3-5pf-17v-sot23/dp/1269406?st=USBLC6-2" H 9550 1950 50  0001 C CNN "Farnell"
-	1    9550 1950
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C?
 U 1 1 5E8950C8
 P 7700 1350
@@ -643,24 +620,13 @@ $EndComp
 $Comp
 L Device:R R?
 U 1 1 5E8A0288
-P 9000 1550
-F 0 "R?" H 8950 1600 50  0000 R CNN
-F 1 "27" H 8950 1700 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 8930 1550 50  0001 C CNN
-F 3 "~" H 9000 1550 50  0001 C CNN
-	1    9000 1550
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5E8A077E
-P 10100 1600
-F 0 "R?" H 10050 1650 50  0000 R CNN
-F 1 "27" H 10050 1750 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 10030 1600 50  0001 C CNN
-F 3 "~" H 10100 1600 50  0001 C CNN
-	1    10100 1600
-	-1   0    0    1   
+P 10600 1700
+F 0 "R?" V 10600 1750 50  0000 R CNN
+F 1 "27" V 10650 1600 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 10530 1700 50  0001 C CNN
+F 3 "~" H 10600 1700 50  0001 C CNN
+	1    10600 1700
+	0    -1   -1   0   
 $EndComp
 Wire Wire Line
 	7200 2150 7200 2200
@@ -738,23 +704,8 @@ Wire Wire Line
 	8200 1550 8600 1550
 Wire Wire Line
 	8600 1550 8600 1500
-Text HLabel 9550 1400 1    50   Input ~ 0
+Text HLabel 9850 1400 1    50   Input ~ 0
 USB_5V
-$Comp
-L power:GND #PWR?
-U 1 1 5E8E108F
-P 9550 2500
-F 0 "#PWR?" H 9550 2250 50  0001 C CNN
-F 1 "GND" H 9555 2327 50  0000 C CNN
-F 2 "" H 9550 2500 50  0001 C CNN
-F 3 "" H 9550 2500 50  0001 C CNN
-	1    9550 2500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9550 1400 9550 1450
-Wire Wire Line
-	9550 2450 9550 2500
 Text GLabel 7650 1750 2    50   Input ~ 0
 PWR_USB_D+
 Text GLabel 7650 1850 2    50   Input ~ 0
@@ -764,24 +715,68 @@ Wire Wire Line
 Wire Wire Line
 	7600 1850 7650 1850
 Connection ~ 8200 1550
-Text GLabel 9000 2050 0    50   Input ~ 0
+Text GLabel 9250 1700 0    50   Input ~ 0
 PWR_USB_D-
-Text GLabel 10100 2050 2    50   Input ~ 0
+Text GLabel 9250 1850 0    50   Input ~ 0
 PWR_USB_D+
+$Comp
+L Transistor_FET:SUD08P06-155L Q?
+U 1 1 5E6AE7AF
+P 1300 3600
+F 0 "Q?" H 1504 3646 50  0000 L CNN
+F 1 "DMG2305" H 1504 3555 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1500 3525 50  0001 L CIN
+F 3 "https://www.diodes.com/assets/Datasheets/DMG2305UX.pdf" H 1300 3600 50  0001 L CNN
+	1    1300 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L ugsm_lib:USBLC6 U?
+U 1 1 5E73108B
+P 9850 1800
+F 0 "U?" H 10250 2100 50  0000 C CNN
+F 1 "USBLC6" H 9500 2100 50  0000 C CNN
+F 2 "" H 9600 2000 50  0001 C CNN
+F 3 "" H 9600 2000 50  0001 C CNN
+	1    9850 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E747AA3
+P 10600 1850
+F 0 "R?" V 10600 1900 50  0000 R CNN
+F 1 "27" V 10650 1750 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 10530 1850 50  0001 C CNN
+F 3 "~" H 10600 1850 50  0001 C CNN
+	1    10600 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E74FC44
+P 9850 2150
+F 0 "#PWR?" H 9850 1900 50  0001 C CNN
+F 1 "GND" H 9855 1977 50  0000 C CNN
+F 2 "" H 9850 2150 50  0001 C CNN
+F 3 "" H 9850 2150 50  0001 C CNN
+	1    9850 2150
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	9000 1700 9000 1850
+	9250 1700 9300 1700
 Wire Wire Line
-	9000 1850 9050 1850
+	9250 1850 9300 1850
 Wire Wire Line
-	9000 2050 9050 2050
+	9850 1400 9850 1450
 Wire Wire Line
-	9000 1350 9000 1400
+	9850 2100 9850 2150
 Wire Wire Line
-	10100 1400 10100 1450
+	10400 1700 10450 1700
 Wire Wire Line
-	10050 1850 10100 1850
+	10400 1850 10450 1850
 Wire Wire Line
-	10100 1850 10100 1750
+	10750 1700 10800 1700
 Wire Wire Line
-	10050 2050 10100 2050
+	10750 1850 10800 1850
 $EndSCHEMATC
