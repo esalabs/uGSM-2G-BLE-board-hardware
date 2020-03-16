@@ -599,4 +599,20 @@ F 3 "" H 3700 4450 50  0001 C CNN
 	1    3700 4450
 	0    1    1    0   
 $EndComp
+Text HLabel 7000 3900 2    50   Input ~ 0
+SIM_RX
+Text HLabel 7000 3800 2    50   Input ~ 0
+SIM_TX
+Wire Wire Line
+	7000 3800 6950 3800
+Wire Wire Line
+	6950 3900 7000 3900
+Text HLabel 7000 3700 2    50   Input ~ 0
+SIM_PWRKEY
+Wire Wire Line
+	6950 3700 7000 3700
+Text HLabel 7000 3600 2    50   Input ~ 0
+SIM_RING
+Wire Wire Line
+	6950 3600 7000 3600
 $EndSCHEMATC
